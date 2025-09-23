@@ -1,0 +1,25 @@
+services:
+  service1:
+    build: ./service1
+    container_name: service1
+    depends_on:
+      - service2
+      - storage
+    ports:
+      - "8199:8199"
+    volumes:
+      - ./vstorage:/vstorage
+  
+  service2:
+    build: ./service2
+    container_name: service2
+    depends_on:
+      - storage
+    volumes:
+      - ./vstorage:/vstorage
+
+  storage:
+    build: ./storage
+    container_name: storage
+    volumes:
+      - ./vstorage:/vstorage
