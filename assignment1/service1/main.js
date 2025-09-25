@@ -19,7 +19,7 @@ async function get_diskspace() {
 async function get_status_record() {
     const uptime = ((Date.now() - boot_time) / 1000 / 60 / 60).toFixed(2)
     const diskspace = await get_diskspace()
-    const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19)
+    const timestamp = new Date().toISOString().split('.')[0] + "Z";
     return `${timestamp}: uptime ${uptime} hours, free disk in root: ${diskspace} Mbytes`
 }
 

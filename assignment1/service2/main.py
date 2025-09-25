@@ -11,7 +11,7 @@ vstorage_log_file = "/vstorage/records.log"
 def get_status_record():
     uptime = float(time.time() - boot_time) / 3600
     diskspace = subprocess.check_output(['df', '-BM', '/', '--output=avail']).decode().split('\n')[1].strip().rstrip('M')
-    timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
+    timestamp = time.strftime('%Y-%m-%dT%H:%M:%SZ')
     return f"{timestamp}: uptime {uptime:.2f} hours, free disk in root: {diskspace} Mbytes"
 
 @app.route("/status", methods=["GET"])
