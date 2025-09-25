@@ -1,0 +1,12 @@
+Tool: Copilot in vscode.
+Reason to use: Help with syntax errors.
+How helped: If I changed a variable naming, it automatically changed it everywhere in the code. Also notified 
+    and helped with syntax errors I did while writing the code.
+What kind of mistakes: Didn't use enough to get any mistakes.
+What tool wasn't able to provide: All I wanted was help with syntax errors and it provided me that.
+
+Tool: ChatGpt-5
+Reason to use: Help with finding different ways to show uptime and free diskspace for the different languages.
+How helped: It gave me multiple different option for those.
+What kind of mistakes: The tool didn't know the correct way to import modules to node.js.
+What tool wasn't able to provide: The code it gave didn't work as is, it needed to be modified to fit with my code.
