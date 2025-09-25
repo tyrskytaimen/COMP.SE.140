@@ -22,4 +22,7 @@ services:
     build: ./storage
     container_name: storage
     volumes:
-      - ./vstorage:/vstorage
+      - vstorage:/vstorage
+
+volumes:
+  vstorage:

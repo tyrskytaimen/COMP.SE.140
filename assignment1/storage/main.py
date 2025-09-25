@@ -2,13 +2,13 @@ from flask import Flask, Response, request
 
 app = Flask(__name__)
 
-log_file = "records.log"
+log_file = "/vstorage/records.log"
 
 @app.route("/log", methods=["POST"])
 def save_content():
     record = request.data.decode()
 
-    # Write to container log file
+    # Write to container log file vstorage
     with open(log_file, "a") as f:
         f.write(record + "\n")
 
